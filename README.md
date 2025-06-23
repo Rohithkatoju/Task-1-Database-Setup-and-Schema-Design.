@@ -1,1 +1,29 @@
 # Task-1-Database-Setup-and-Schema-Design.
+
+-- Below query is to create database on the name of "Library"...
+create database libraby;
+use library;
+
+-- Below Quries are used to create the related tables in the library..
+-- ( Authors, Publisher, Books, Members, Borrow_records ) are the tables in library
+ 
+create table Authors ( author_id int auto_increment primary key, full_name varchar(100), bioghraph text );
+
+create table Publisher ( publisher_id int auto_increment primary key, publisher_name varchar(100), address varchar(1000) );
+
+create table Books ( book_Id int auto_increment primary key, title varchar(100), author_id int,
+						publisher_id int, genre varchar(100), total_copies int, available_copies int, foreign key (author_id) references Authors(author_id),
+                        foreign key (publisher_id) references Publisher(publisher_id));
+
+create table Members ( member_id int auto_increment primary key, person_name varchar(100), email varchar(100) not null unique,
+						phone varchar(15) not null, membership_date date default(current_timestamp));
+
+create table Borrow_records ( borrow_id int auto_increment primary key, book_id int, member_id int, borrow_date date default(current_timestamp),
+								due_date datetime, return_date datetime, fine_amount decimal(6,2), foreign key (book_id) references Books(book_id),
+                                foreign key (member_id) references Members(member_id));
+
+create table Staff ( staff_id int auto_increment primary key, stuff_name varchar(100) not null, designation varchar(100) not null, 
+						email varchar(100) not null unique, phone varchar(15)  not null unique);
+
+show tables from library;
+
