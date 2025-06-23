@@ -29,8 +29,3 @@ The Members table keeps records of individuals who are registered to borrow book
 
 The Borrow_Records table tracks the borrowing activity, showing which member borrowed which book, along with dates and any fines.
 
-The Staff table stores details of library employees, including their names, contact information, and job designations.
-
-step-5 : Verify Tables
-
-step-6 : Check Table Structure
