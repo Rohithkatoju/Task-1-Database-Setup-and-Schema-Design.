@@ -19,13 +19,3 @@
 | total_copies                          |  | return_date     |
 | available_copies                      |  | fine_amount     |
 +----------+                             +-----------------+
-
-                 +---------+
-                 |  Staff  |
-                 +---------+
-                 | staff_id|
-                 | name    |
-                 | email   |
-                 | phone   |
-                 | designation |
-                 +---------+
