@@ -22,8 +22,6 @@ create table Borrow_records ( borrow_id int auto_increment primary key, book_id 
 								due_date datetime, return_date datetime, fine_amount decimal(6,2), foreign key (book_id) references Books(book_id),
                                 foreign key (member_id) references Members(member_id));
 
-create table Staff ( staff_id int auto_increment primary key, staff_name varchar(100) not null, designation varchar(100) not null, 
-						email varchar(100) not null unique, phone varchar(15)  not null unique);
-
 show tables from library;
+-- above query will show's the number of tables present in the database of ' Labrary '..
 
